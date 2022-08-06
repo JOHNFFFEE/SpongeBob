@@ -1,0 +1,57 @@
+.container {
+  /* height: 100%; */
+  overflow: hidden;
+  /* background-image: url("/background.png"); */
+  background-color: var(--backgroundColor);
+  /* background-repeat: no-repeat; Do not repeat the image */
+  /* background-size: cover; Resize the background image to cover the entire container */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+.icons a {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--baseText);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icons li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.icons li a {
+  transition: all 0.3s ease 0s;
+}
+
+/* .icons li a:hover {
+  color: green;
+} */
+
+/* .icons {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 100px;
+} */
+
+/* .title {
+  color: #edf0f1;
+} */
+
+.button {
+  padding: 9px 25px;
+  background-color: transparent;
+  border-color: gray;
+  color: #edf0f1;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 1.2rem;
+}

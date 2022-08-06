@@ -1,0 +1,29 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  /* color: #edf0f1; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+
+  /* background-color: black; */
+}
+
+:root {
+  --baseText: #edf0f1;
+  --backgroundMint: #006eff;
+  --backgroundSelect: white;
+  --inputInfo: black;
+  --backgroundColor: black;
+  --card: rgba(0, 58, 117, 0.585582);
+}
