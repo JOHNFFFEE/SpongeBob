@@ -88,20 +88,30 @@ export default function Home() {
                 <ul>
                   <li
                     style={{
-                      fontWeight: "bold",
+                      fontWeight: "700",
                     }}
                   >
                     MINT PHASE 1:
                   </li>
-                  <li>1 NFT free then 0.00969 ETH</li>
-                  <li>
-                    <b>TOTAL SUPPLY :</b> 10.000
+                  <li
+                    style={{
+                      fontWeight: "400",
+                    }}
+                  >
+                    1 NFT free then 0.00969 ETH
+                  </li>
+                  <li
+                    style={{
+                      fontWeight: "400",
+                    }}
+                  >
+                    <b>TOTAL SUPPLY :</b> 10000
                   </li>
                 </ul>
               </div>{" "}
               <div className={styles.price}>
                 {/* <hr /> */}
-                <span>PRICE </span>
+                <span>PRICE :</span>
                 <span>0.01938 ETH</span>
               </div>
               <div className={styles.bloxBuy}>
@@ -156,7 +166,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <h2 className={styles.description}>7345/1000</h2>
+        <h2 className={styles.description}>
+          {1 > 2 ? 7345 / 1000 : "Sold Out"}
+        </h2>
         <h3 className={styles.textbelow}>Left to be minted</h3>
       </main>
     </div>
