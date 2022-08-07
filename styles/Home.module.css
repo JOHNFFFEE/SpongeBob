@@ -223,6 +223,18 @@
   background-color: var(--backgroundSelect);
   color: var(--inputInfo);
 }
+.ImageContainer {
+  position: relative;
+  width: 89px;
+  height: 89px;
+}
+.image {
+  position: relative;
+  height: 547px;
+  width: 453px;
+  background-color: var(--card);
+  border-radius: 10px 0 0 10px;
+}
 
 .minting {
   display: flex;
@@ -289,6 +301,64 @@
   }
 }
 
+/* spinner */
+.spinner {
+  width: 100px;
+  height: 100px;
+}
+
+.spinner svg {
+  animation: rotate 1.5s linear infinite;
+}
+
+.spinner circle {
+  animation: color 6s ease-in-out infinite, dash 1.5s ease-in-out infinite;
+  fill: none;
+  stroke-width: 3;
+  stroke: black;
+  stroke-linecap: round;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes color {
+  100%,
+  0% {
+    stroke: violet;
+  }
+  25% {
+    stroke: #fc4f4f;
+  }
+  50% {
+    stroke: #ffcf00;
+  }
+  75% {
+    stroke: darkgreen;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+
 /* phones */
 /* @media (max-width: 600px) {
   .grid {
@@ -319,7 +389,7 @@
     display: flex;
     flex-direction: column;
   }
-  .container div:first-child {
+  .image {
     order: 2;
   }
 }
@@ -329,17 +399,15 @@
   .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .headerMsg {
     display: none;
   }
 
-  .main image {
-    width: 250px;
-    height: 102px;
+  .main Image {
+    width: 10px;
+    height: 10px;
   }
 
   .cardheader {
@@ -365,14 +433,47 @@
 
   .box {
     padding: 0;
-    width: 266px;
-    height: 266px;
+    display: flex;
+    flex-direction: column;
+    /* width: 90%;
+    height: 80%; */
   }
 
-  .box ul {
+  .cardheader > span {
+    position: absolute;
+    top: 60.25%;
+    left: 42%;
+    z-index: 5;
+  }
+
+  .redcircle {
+    position: absolute;
+    top: 61%;
+    left: 36%;
+    z-index: 5;
+  }
+  .ImageContainer {
+    display: flex;
+    width: 266px;
+    height: 266px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+    order: 2;
+  }
+
+  .box > ul > li:nth-child(n + 1) {
     display: none;
+  }
+  .box > ul > li:first-child {
+    display: block;
   }
   .card {
     background-color: inherit;
+  }
+
+  .grid {
+    gap: 8rem;
   }
 }

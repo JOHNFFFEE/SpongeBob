@@ -12,6 +12,7 @@ import { BiAnchor } from "react-icons/bi";
 
 export default function Home() {
   const [mintAmount, setMintAmount] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   const decrementMintAmount = () => {
     let newMintAmount = mintAmount - 1;
@@ -57,8 +58,8 @@ export default function Home() {
             <Image
               src="/main.png"
               alt="Picture of the author"
-              width={448}
-              height={543} //automatically provided
+              objectFit="contain"
+              layout="fill" //automatically provided
             />
           </div>
           <div>
@@ -73,15 +74,20 @@ export default function Home() {
                 {/* <p className={styles.minted}>5000/5000</p> */}
               </div>
               <div className={styles.box}>
-                <Image
+                {/* <Image
+                  className={styles.ImageTest}
                   src="/imgside.gif"
                   alt="Picture of the author"
-                  width={89}
-                  height={89} //automatically provided
-                  style={{
-                    borderRadius: "5px",
-                  }}
-                />
+                  
+                /> */}
+                <div className={styles.ImageContainer}>
+                  <Image
+                    src="/imgside.gif"
+                    layout="fill"
+                    objectFit="cover"
+                    style={{ borderRadius: "5px" }}
+                  />
+                </div>
 
                 <ul>
                   <li
@@ -135,7 +141,15 @@ export default function Home() {
                 </ul>
               </div>
               <div className={styles.minting}>
-                <a href="#" className={styles.rainbowbutton} alt="Mint"></a>
+                <a href="#" className={styles.rainbowbutton} alt="Mint">
+                  {loading && (
+                    <i className={styles.spinner}>
+                      <svg viewBox="0 0 100 100">
+                        <circle cx={50} cy={50} r={20} />
+                      </svg>
+                    </i>
+                  )}
+                </a>
 
                 <div className={styles.footerMsg}>
                   <BiAnchor
@@ -154,6 +168,12 @@ export default function Home() {
         </div>
         <h2 className={styles.description}>
           {1 > 2 ? 7345 / 1000 : "SOLD OUT. Visit Opensea"}
+
+          {/* <div className={styles.spinner}>
+            <svg viewBox="0 0 100 100">
+              <circle cx={50} cy={50} r={20} />
+            </svg>
+          </div>  */}
         </h2>
         <h3 className={styles.textbelow}>Left to be minted</h3>
       </main>
