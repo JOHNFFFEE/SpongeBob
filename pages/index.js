@@ -59,9 +59,6 @@ export default function Home() {
               alt="Picture of the author"
               width={448}
               height={543} //automatically provided
-              style={{
-                borderRadius: "5px 0 0 5px",
-              }}
             />
           </div>
           <div>
@@ -77,7 +74,7 @@ export default function Home() {
               </div>
               <div className={styles.box}>
                 <Image
-                  src="/imgside.png"
+                  src="/imgside.gif"
                   alt="Picture of the author"
                   width={89}
                   height={89} //automatically provided
@@ -85,6 +82,7 @@ export default function Home() {
                     borderRadius: "5px",
                   }}
                 />
+
                 <ul>
                   <li
                     style={{
@@ -110,7 +108,6 @@ export default function Home() {
                 </ul>
               </div>{" "}
               <div className={styles.price}>
-                {/* <hr /> */}
                 <span>PRICE :</span>
                 <span>0.01938 ETH</span>
               </div>
@@ -136,17 +133,6 @@ export default function Home() {
                     </button>
                   </li>
                 </ul>
-
-                {/* <input type="number">{mintAmount}</input> */}
-                {/* <div className={styles.amount}>{mintAmount}</div>
-
-                <button
-                  className={styles.buttons}
-                  onClick={incrementMintAmount}
-                >
-                  +
-                </button> */}
-                <>{/* <span className={styles.max}>3 Max</span> */}</>
               </div>
               <div className={styles.minting}>
                 <a href="#" className={styles.rainbowbutton} alt="Mint"></a>
@@ -167,7 +153,7 @@ export default function Home() {
           </div>
         </div>
         <h2 className={styles.description}>
-          {1 > 2 ? 7345 / 1000 : "Sold Out"}
+          {1 > 2 ? 7345 / 1000 : "SOLD OUT. Visit Opensea"}
         </h2>
         <h3 className={styles.textbelow}>Left to be minted</h3>
       </main>

@@ -49,6 +49,7 @@
   line-height: 80px;
   color: var(--baseText);
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .headerMsg {
@@ -80,7 +81,7 @@
   padding-left: 2rem;
   border-radius: 0 5px 5px 0;
   width: 452px;
-  height: 547px;
+  height: 539px;
   background-color: var(--card);
   color: var(--baseText);
 }
@@ -287,27 +288,78 @@
 }
 
 /* phones */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
-  }
+  } */
 
-  .card {
-    /* margin-top: 3rem; */
+/* .card {
     width: 300px;
     height: 300px;
-    /* background-color: transparent; */
-  }
+  } */
 
+/* .image {
+    display: none;
+  }
+} */
+
+/* ipad */
+/* @media only screen and (max-width: 768px) {
   .image {
     display: none;
+  }
+} */
+
+/*ipads change elements order */
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container div:first-child {
+    order: 2;
   }
 }
 
-/* ipad */
-@media only screen and (max-width: 768px) {
-  .image {
+@media (max-width: 588px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerMsg {
     display: none;
+  }
+
+  /* .card div:div:first-child {
+    order: 2;
+  } */
+
+  .card {
+    width: 452px;
+    height: 420px;
+  }
+
+  /* .images {
+    width: 266px;
+    height: 266px;
+  } */
+
+  /* .cardheader {
+    display: none;
+  } */
+
+  .box {
+    padding: 0;
+    width: 266px;
+    height: 266px;
+  }
+
+  .box ul {
+    display: none;
+  }
+  .card {
+    background-color: inherit;
   }
 }
