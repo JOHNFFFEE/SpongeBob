@@ -42,16 +42,19 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Image
-          src="/logo.png"
-          alt="Picture of the author"
-          width={436}
-          height={176}
-          style={{
-            paddingBottom: "38px",
-          }} //automatically provided
-        />
-
+        <div className={styles.logo}>
+          <Image
+            src="/logo.png"
+            alt="Picture of the author"
+            width={436}
+            height={176}
+            // layout="fill"
+            // objectPosition="top right"
+            style={{
+              paddingBottom: "38px",
+            }} //automatically provided
+          />
+        </div>
         {/* <h2 className={styles.description}>UNDERWATER CLUB</h2> */}
         <div className={styles.grid}>
           <div className={styles.image}>
@@ -69,7 +72,7 @@ export default function Home() {
               {" "}
               <span className={styles.headerMsg}> MINT YOUR NFT</span>
               <div className={styles.cardheader}>
-                <div className={styles.redcircle}></div>
+                <div className={styles.redcircle}> </div>
                 <span> LIVE NOW!</span>
                 {/* <p className={styles.minted}>5000/5000</p> */}
               </div>
@@ -87,6 +90,11 @@ export default function Home() {
                     objectFit="cover"
                     style={{ borderRadius: "5px" }}
                   />
+                </div>
+                <div className={styles.cardheader2}>
+                  <div className={styles.redcircle}> </div>
+                  <span> LIVE NOW!</span>
+                  {/* <p className={styles.minted}>5000/5000</p> */}
                 </div>
 
                 <ul>
