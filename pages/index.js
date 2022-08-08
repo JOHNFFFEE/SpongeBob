@@ -160,11 +160,12 @@ export default function Home() {
                 </a>
 
                 <div className={styles.footerMsg}>
-                  <BiAnchor
+                  {/* <BiAnchor
                     color="grey"
                     fontSize="1.2rem"
                     stroke="currentColor"
-                  />
+                  />{" "} */}
+                  <Image src="/anchor.png" height={19} width={19} />
                   Underwater Club is waiting for you
                 </div>
                 {/* <span className={styles.desc}>
