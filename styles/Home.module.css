@@ -503,7 +503,8 @@
   }
 
   .logo {
-    width: 50%;
+    width: 286px;
+    height: 102px;
     margin-left: 30px;
   }
 
@@ -574,8 +575,8 @@
 
   .ImageContainer {
     display: flex;
-    width: 266px;
-    height: 266px;
+    width: 360px;
+    height: 547px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -636,13 +637,19 @@
 
   .card {
     background-color: inherit;
+    padding-top: 10px;
   }
 
   .grid {
-    gap: 6rem;
+    gap: 12rem;
   }
 
   .description {
     font-size: 24px;
+    padding-left: 60px;
+  }
+
+  .textbelow {
+    padding-left: 40px;
   }
 }

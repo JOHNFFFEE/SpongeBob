@@ -56,3 +56,10 @@
   padding: 15px;
   font-size: 1.2rem;
 } */
+@media (min-width: 360px) and (max-width: 462px) {
+  .container {
+    display: flex;
+    /* place-items: center; */
+    padding-left: 40px;
+  }
+}
