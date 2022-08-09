@@ -149,7 +149,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className={styles.minting}>
-                <a href="#" className={styles.rainbowbutton} alt="Mint">
+                <button className={styles.rainbowbutton} alt="Mint Button">
                   {loading && (
                     <i className={styles.spinner}>
                       <svg viewBox="0 0 100 100">
@@ -157,7 +157,7 @@ export default function Home() {
                       </svg>
                     </i>
                   )}
-                </a>
+                </button>
 
                 <div className={styles.footerMsg}>
                   {/* <BiAnchor
