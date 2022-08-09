@@ -50,7 +50,7 @@
 }
 
 .description {
-  font-size: 24px;
+  font-size: 53px;
   line-height: 80px;
   color: var(--baseText);
   margin-top: 0;
@@ -156,7 +156,7 @@
 }
 
 .price {
-  margin: 1.5rem 0 1.5rem 0;
+  margin: 36px 0 36px 0;
   display: flex;
   /* justify-content: space-between; */
   flex-direction: row;
@@ -252,7 +252,7 @@
   justify-content: center;
   align-items: center;
   /* gap: px; */
-  margin-top: 1.5rem;
+  margin-top: 23px;
   flex-wrap: wrap;
   color: var(--baseText);
 
@@ -261,7 +261,7 @@
 }
 
 .footerMsg {
-  margin-top: 40px;
+  margin-top: 22px;
   font-weight: 400;
   font-size: 19px;
   line-height: 22px;
@@ -326,15 +326,20 @@
   margin-top: 50px; */
   width: 390px;
   cursor: pointer;
-  background-color: var(--backgroundMint);
+  background-color: transparent;
   border-color: transparent;
+}
+
+.rainbowbutton:hover {
+  background-color: #18c9f1;
+  position: relative;
 }
 
 /*for colors spinner*/
 .rainbowbutton:before {
   content: "";
-  height: 220%;
-  width: 220%;
+  height: 500px;
+  width: 500px;
   position: absolute;
   background: conic-gradient(
     #ff0000,
@@ -346,8 +351,8 @@
     #ee82ee
   );
 
-  left: -50%;
-  top: -50%;
+  left: -50px;
+  top: -100px;
   animation: spin 2s infinite linear;
 }
 
@@ -377,13 +382,13 @@
 }
 
 /* spinner */
-.spinner {
+/* .spinner {
   width: 100px;
   height: 100px;
 }
 
 .spinner svg {
-  animation: rotate 1.5s linear infinite;
+  animation: rotate 2s linear infinite;
 }
 
 .spinner circle {
@@ -432,7 +437,7 @@
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -124;
   }
-}
+} */
 
 /* phones */
 /* @media (max-width: 600px) {
@@ -466,12 +471,21 @@
   }
   .image {
     order: 2;
+    border-radius: 0;
   }
-}
 
-.logo {
-  width: 50%;
-  height: 50%;
+  .card {
+    border-radius: 0;
+  }
+
+  .description {
+    font-size: 24px;
+  }
+
+  .logo {
+    width: 50%;
+    height: 50%;
+  }
 }
 
 /*hide the live now */
@@ -517,7 +531,8 @@
   }
 
   .price {
-    margin: 1.5rem 0 1.5rem 1.5rem;
+    /* padding-top: 36.5px; */
+    margin: 36.5px 0 36.5px 22px;
     display: flex;
     /* justify-content: space-between; */
     flex-direction: row;
@@ -536,6 +551,8 @@
 
   .minting {
     margin-left: 18px;
+
+    /* height: 42px; */
   }
   .bloxBuy {
     margin-left: 18px;
@@ -623,5 +640,9 @@
 
   .grid {
     gap: 6rem;
+  }
+
+  .description {
+    font-size: 24px;
   }
 }

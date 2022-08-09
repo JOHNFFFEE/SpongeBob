@@ -149,7 +149,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className={styles.minting}>
-                <button className={styles.rainbowbutton} alt="Mint Button">
+                <button className={styles.rainbowbutton} alt="Mint">
                   {loading && (
                     <i className={styles.spinner}>
                       <svg viewBox="0 0 100 100">
