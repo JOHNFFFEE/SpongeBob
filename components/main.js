@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-// import Link from "next/link";
-// import gif from "../public/mint.gif";
 
 import { useWeb3React } from "@web3-react/core";
 import { InjectedConnector } from "@web3-react/injected-connector";
@@ -31,10 +29,6 @@ export default function Main() {
   const [loading, setLoading] = useState(false);
   const [verified, setVerified] = useState(false);
 
-  // const [totalAmount, setTotalAmount] = useState("");
-  // const [PersonalAmount, setPersonalAmount] = useState(0);
-  // const [claimed, setClaimed] = useState("");
-
   const contractAddress = "0x9E6989977a9Ba9AdD47485CcD176f66EC4F86380";
 
   const {
@@ -45,13 +39,6 @@ export default function Main() {
     accountsChanged,
     library: provider,
   } = useWeb3React();
-
-  // useEffect(() => {
-  //   if (typeof window.ethereum !== "undefined") {
-  //     setHasMetamask(true);
-  //     //    inWL();
-  //   }
-  // });
 
   async function connect() {
     if (typeof window.ethereum !== "undefined") {
@@ -107,11 +94,8 @@ export default function Main() {
     if (active) {
       inWL();
       info();
-      // calculation();
     }
   }, [active, accountsChanged]);
-
-  // accountsChanged;
 
   async function info() {
     if (active) {
@@ -120,10 +104,6 @@ export default function Main() {
       try {
         const Price = await contract.price();
         setmyPrice(Price);
-
-        // let totalAmountClaimed = await contract.amountClaimed();
-        // console.log(ethers.utils.formatUnits(totalAmountClaimed, 0));
-        // setTotalAmount(ethers.utils.formatUnits(totalAmountClaimed, 0));
       } catch (error) {
         console.log(error);
       }
@@ -177,12 +157,6 @@ export default function Main() {
     }
   }
 
-  // async function calculation() {
-  //   let payableamount = (mintAmount - 1) * myPrice;
-  //   console.log(payableamount.toString());
-  //   settoPay(payableamount.toString());
-  // }
-
   async function mint() {
     try {
       if (active) {
@@ -192,10 +166,6 @@ export default function Main() {
           "0x60298f78cc0b47170ba79c10aa3851d7648bd96f2f8e46a19dbc777c36fb0c00",
         ];
         let payableamount = 0;
-
-        // if (isPublicOpen && isWLopen === "false") {
-        //   console.log("contract closed");
-        // }
 
         if (isWLopen) {
           setLoading(true);
@@ -214,8 +184,6 @@ export default function Main() {
           payableamount = (mintAmount - 1) * myPrice;
           payableamount = payableamount.toString();
         }
-
-        // console.log(mintAmount, proofTemp, payableamount);
 
         let mints = await contract.mint(mintAmount, proofTemp, {
           value: payableamount,
@@ -256,13 +224,8 @@ export default function Main() {
         progress: undefined,
       });
 
-      // toast.promise(e.reason, {
-      //   error: "Promise rejected 🤯",
-      // });
-
       setLoading(false);
 
-      // openSnackbar(error.message);
       console.log(e);
     }
   }
