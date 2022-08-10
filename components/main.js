@@ -248,7 +248,14 @@ export default function Main() {
 
   return (
     <div className={styles.container}>
-      <video autoPlay loop muted id={styles.video} preload>
+      <video
+        autoPlay
+        loop
+        muted
+        id={styles.video}
+        preload="true"
+        controls={false}
+      >
         <source src="/videofile.mp4" type="video/mp4" />
       </video>
       <Head>
