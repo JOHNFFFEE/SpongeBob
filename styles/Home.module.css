@@ -367,10 +367,12 @@
     background-image: url("/mobile-bg.jpg");
     /* background-origin: content-box; */
     background-repeat: repeat;
-    background-size: contain;
+    background-size: cover;
     position: absolute;
     width: 450px;
-    z-index: 2;
+    z-index: -1;
+    padding-right: 40px;
+
     /* height: 120%; */
   }
 
@@ -378,7 +380,7 @@
     width: 286px;
     height: 102px;
     margin-left: 30px;
-    padding-top: 24px;
+    padding-top: 50px;
   }
 
   .headerMsg {
@@ -429,7 +431,7 @@
 
   .image {
     margin-top: 10px;
-    width: 100%;
+    margin-left: 35px;
   }
 
   .box > ul > li:nth-child(n + 1) {
@@ -476,7 +478,7 @@
 
   .card {
     background-color: inherit;
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .grid {
