@@ -496,7 +496,7 @@
 }
 
 /*phones */
-@media (min-width: 360px) and (max-width: 462px) {
+@media (max-width: 462px) {
   .container {
     display: flex;
     flex-direction: column;
