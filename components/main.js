@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+// import Link from "next/link";
 // import gif from "../public/mint.gif";
 
 import { useWeb3React } from "@web3-react/core";
@@ -26,6 +27,7 @@ export default function Main() {
   const [proofs, setProof] = useState("");
   const [mintAmount, setMintAmount] = useState(1);
   const [minted, setMinted] = useState(0);
+  const [toPay, settoPay] = useState(0);
   const [loading, setLoading] = useState(false);
   const [verified, setVerified] = useState(false);
 
@@ -51,20 +53,33 @@ export default function Main() {
   //   }
   // });
 
+  async function connect() {
+    if (typeof window.ethereum !== "undefined") {
+      try {
+        await activate(injected);
+        setHasMetamask(true);
+      } catch (e) {
+        console.log(e);
+      }
+    }
+  }
+
   useEffect(() => {
     if (!active) {
-      async function connect() {
-        if (typeof window.ethereum !== "undefined") {
-          try {
-            await activate(injected);
-            setHasMetamask(true);
-          } catch (e) {
-            // openSnackbar(e);
-            console.log(e);
-          }
+      toast.info(
+        <a href="#" onClick={() => connect()}>
+          🦊Connect to metamask
+        </a>,
+        {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          // closeOnClick: true,
+          // pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
         }
-      }
-      connect();
+      );
     }
   }, [!active]);
 
@@ -92,6 +107,7 @@ export default function Main() {
     if (active) {
       inWL();
       info();
+      // calculation();
     }
   }, [active, accountsChanged]);
 
@@ -144,10 +160,28 @@ export default function Main() {
       } catch (error) {
         console.log(error);
       }
+
+      let payableamount = 0;
+      if (mintAmount === 1 && minted === 0) {
+        payableamount = 0;
+      } else if (minted > 0) {
+        payableamount = mintAmount * myPrice;
+        payableamount = payableamount.toString();
+        settoPay(payableamount);
+      } else {
+        payableamount = (mintAmount - 1) * myPrice;
+        payableamount = payableamount.toString();
+      }
     } else {
       console.log("Please install MetaMask");
     }
   }
+
+  // async function calculation() {
+  //   let payableamount = (mintAmount - 1) * myPrice;
+  //   console.log(payableamount.toString());
+  //   settoPay(payableamount.toString());
+  // }
 
   async function mint() {
     try {
@@ -181,7 +215,7 @@ export default function Main() {
           payableamount = payableamount.toString();
         }
 
-        console.log(mintAmount, proofTemp, payableamount);
+        // console.log(mintAmount, proofTemp, payableamount);
 
         let mints = await contract.mint(mintAmount, proofTemp, {
           value: payableamount,
@@ -323,7 +357,7 @@ export default function Main() {
                       fontWeight: "700",
                     }}
                   >
-                    MINT PHASE 1:
+                    MINT {mintAmount} NFT
                   </li>
                   <li
                     style={{
@@ -345,7 +379,12 @@ export default function Main() {
               <div className={styles.price}>
                 <span>PRICE :</span>
                 <span>
-                  {active ? ethers.utils.formatEther(myPrice) : 0} ETH
+                  {active
+                    ? (ethers.utils.formatEther(myPrice) * mintAmount)
+                        .toString()
+                        .substring(0, 7)
+                    : 0.00969}{" "}
+                  ETH
                 </span>
               </div>
               <div className={styles.bloxBuy}>
@@ -377,15 +416,7 @@ export default function Main() {
                   alt="Mint"
                   onClick={() => mint()}
                   disabled={loading}
-                >
-                  {/* {loading && (
-                    <i className={styles.spinner}>
-                      <svg viewBox="0 0 100 100">
-                        <circle cx={50} cy={50} r={20} />
-                      </svg>
-                    </i>
-                  )} */}
-                </button>
+                ></button>
 
                 <div className={styles.footerMsg}>
                   <Image src="/anchor.png" height={19} width={19} />

@@ -500,14 +500,16 @@
   .container {
     display: flex;
     flex-direction: column;
-    place-items: center center;
-    width: 105%;
+    align-items: stretch;
+    justify-content: center;
+    /* width: 105%; */
   }
 
   .logo {
     width: 286px;
     height: 102px;
     margin-left: 30px;
+    padding-top: 24px;
   }
 
   /* .box {
@@ -592,10 +594,6 @@
 
   .image {
     margin-top: 10px;
-    /* margin-left: 8px; */
-    /* margin-left: 1.5rem; */
-    /* width: 360px;
-    height: 399px; */
   }
 
   .box > ul > li:nth-child(n + 1) {
@@ -648,7 +646,8 @@
 
   .card {
     background-color: inherit;
-    padding-top: 10px;
+    margin-top: 40px;
+    /* padding-top: 10px; */
   }
 
   .grid {
