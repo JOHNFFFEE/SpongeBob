@@ -55,7 +55,7 @@ export default function Main() {
     if (!active) {
       toast.info(
         <a href="#" onClick={() => connect()}>
-          🦊Connect to metamask
+          🦊 Click here to connect to metamask
         </a>,
         {
           position: "top-center",
@@ -248,7 +248,7 @@ export default function Main() {
 
   return (
     <div className={styles.container}>
-      <video autoPlay loop muted id={styles.video}>
+      <video autoplay="autoplay" loop muted id={styles.video} preload>
         <source src="/videofile.mp4" type="video/mp4" />
       </video>
       <Head>
@@ -275,6 +275,7 @@ export default function Main() {
             alt="Picture of the author"
             width={436}
             height={176}
+            loading="eager"
             style={{
               paddingBottom: "38px",
             }} //automatically provided
@@ -287,6 +288,7 @@ export default function Main() {
               alt="Picture of the author"
               objectFit="contain"
               layout="fill" //automatically provided
+              loading="eager"
             />
           </div>
           <div>
@@ -306,6 +308,7 @@ export default function Main() {
                     src="/imgside.gif"
                     layout="fill"
                     objectFit="cover"
+                    loading="eager"
                     style={{ borderRadius: "5px" }}
                   />
                 </div>
@@ -328,7 +331,7 @@ export default function Main() {
                     }}
                   >
                     1 NFT free then{" "}
-                    {active ? ethers.utils.formatEther(myPrice) : 0} ETH
+                    {active ? ethers.utils.formatEther(myPrice) : 0.00696} ETH
                   </li>
                   <li
                     style={{

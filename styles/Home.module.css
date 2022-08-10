@@ -148,7 +148,7 @@
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  gap: 15rem;
+  /* gap: 15rem; */
   border-top: 0.5px solid #edf0f1;
   border-bottom: 0.5px solid #edf0f1;
   width: 93%;
@@ -381,7 +381,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 6rem;
+    /* gap: 6rem; */
     border-top: 0.5px solid #edf0f1;
     border-bottom: 0.5px solid #edf0f1;
     width: 90%;
