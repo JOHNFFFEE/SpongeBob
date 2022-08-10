@@ -380,7 +380,7 @@ export default function Main() {
                 <span>PRICE :</span>
                 <span>
                   {active
-                    ? (ethers.utils.formatEther(myPrice) * mintAmount)
+                    ? (ethers.utils.formatEther(myPrice) * (mintAmount - 1))
                         .toString()
                         .substring(0, 7)
                     : 0.00969}{" "}

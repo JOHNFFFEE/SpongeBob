@@ -158,9 +158,9 @@
 .price {
   margin: 36px 0 36px 0;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   flex-direction: row;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
   /* border: 1px solid #edf0f1; */
   /* flex-wrap: wrap; */
