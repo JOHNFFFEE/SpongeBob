@@ -500,6 +500,8 @@
   .container {
     display: flex;
     flex-direction: column;
+    place-items: center center;
+    width: 105%;
   }
 
   .logo {
@@ -590,7 +592,7 @@
 
   .image {
     margin-top: 10px;
-    margin-left: 40px;
+    /* margin-left: 8px; */
     /* margin-left: 1.5rem; */
     /* width: 360px;
     height: 399px; */
@@ -629,6 +631,15 @@
 
   .rainbowbutton {
     height: 42px;
+  }
+
+  .rainbowbutton::after {
+    height: 85%;
+    width: 98%;
+    top: 7%;
+    left: 1%;
+
+    /* margin: 0 0 5px 0; */
   }
 
   /* .box > ul > li:last-child {

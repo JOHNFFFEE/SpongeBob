@@ -397,7 +397,7 @@ export default function Main() {
         </div>
         <h2 className={styles.description}>
           {myTotalSupply <= 10000
-            ? 10000 - myTotalSupply + "/ 10000"
+            ? 10000 - myTotalSupply + "/10000"
             : "SOLD OUT. Visit Opensea"}
         </h2>
         <h3 className={styles.textbelow}>Left to be minted</h3>
