@@ -9,17 +9,17 @@ export default function Footer() {
     <nav className={styles.container}>
       <ul className={styles.icons}>
         <li>
-          <a href="https://twitter.com/cryptosnowmen/status/1435122724294012416?s=21">
+          <a href="#">
             <Image src={twitter} height={24} width={24} />
           </a>
         </li>
         <li>
-          <a href="https://etherscan.io/address/0xd2d85d95bce7f9917e52cc5ed7d0c2126ca19bf7">
+          <a href="#">
             <Image src={etherscan} height={24} width={24} />
           </a>
         </li>
         <li>
-          <a href="https://opensea.io/collection/stickmentoys">
+          <a href="#">
             <Image src={opensea} height={24} width={24} />
           </a>
         </li>
