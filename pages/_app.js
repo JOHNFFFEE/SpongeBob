@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 
 import Header from "../components/header";
-import Footer from "../components/footer";
+// import Footer from "../components/footer";
 import { Web3ReactProvider } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
 
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Web3ReactProvider getLibrary={getLibrary}>
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
       </Web3ReactProvider>
     </>
   );

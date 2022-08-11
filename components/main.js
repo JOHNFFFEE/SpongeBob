@@ -10,6 +10,8 @@ import { ethers } from "ethers";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import Footer from "./footer";
+
 const { MerkleTree } = require("merkletreejs");
 const keccak256 = require("keccak256");
 const tokens = require("../constants/tokens.json");
@@ -65,7 +67,7 @@ export default function Main() {
           // pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "dark",
+          // theme: "dark",
         }
       );
     }
@@ -275,7 +277,6 @@ export default function Main() {
         draggable
         pauseOnHover
       />
-
       <main className={styles.main}>
         <div className={styles.logo}>
           <Image
@@ -407,6 +408,7 @@ export default function Main() {
         </h2>
         <h3 className={styles.textbelow}>Left to be minted</h3>
       </main>
+      <Footer />
     </div>
   );
 }

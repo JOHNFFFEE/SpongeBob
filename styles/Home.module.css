@@ -366,21 +366,26 @@
     /* overflow: hidden; */
     background-image: url("/mobile-bg.jpg");
     /* background-origin: content-box; */
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    /* background-position: center; */
     background-size: cover;
-    position: absolute;
-    width: 450px;
-    z-index: -1;
+    /* position: relative; */
+    /* width: 450px; */
+    z-index: -2;
     padding-right: 40px;
-
+    /* position: relative; */
     /* height: 120%; */
+    /* top: 10%;
+    bottom: 10%; */
+    width: 450px;
+    height: auto;
   }
 
   .logo {
     width: 286px;
     height: 102px;
     margin-left: 30px;
-    padding-top: 50px;
+    padding-top: 24px;
   }
 
   .headerMsg {
@@ -478,7 +483,7 @@
 
   .card {
     background-color: inherit;
-    margin-top: 50px;
+    margin-top: 26px;
   }
 
   .grid {
