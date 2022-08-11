@@ -255,7 +255,7 @@ export default function Main() {
         autoPlay
         loop
         muted
-        id={styles.video}
+        className={styles.video}
         preload="true"
         controls={false}
       >
