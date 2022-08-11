@@ -25,6 +25,7 @@
 
 .container {
   z-index: 2;
+  background: url("/public/videofile.mp4") center center / no-repeat;
 }
 
 .main {
