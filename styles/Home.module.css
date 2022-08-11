@@ -491,5 +491,6 @@
 
   .video {
     display: none;
+    visibility: hidden;
   }
 }
